@@ -45,10 +45,12 @@ router.get("/login", function(req, res) {
 /* user login */
 router.post("/login", passport.authenticate("local", {
     
-    successRedirect: "/campgrounds",
-    failureRedirect: "/login"
-}), function(req, res){
-});
+        successRedirect: "/campgrounds",
+        failureRedirect: "/login",
+        failureFlash: true,
+        successFlash: "Welcome back!"
+     })
+);
 
 /* user logout */
 router.get("/logout", function(req, res) {
