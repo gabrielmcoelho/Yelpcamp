@@ -74,6 +74,7 @@ app.use(commentRoutes);
 // ====================
 //    STARTING SERVER
 // ====================
-app.listen(process.env.PORT, process.env.IP, function(){
+app.listen(3000, function () {
     console.log("Yelpcamp application has started running!");
-})
+});
+
